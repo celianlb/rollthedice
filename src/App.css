@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1b1b1b;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.scene {
+  perspective: 800px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.cube-face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border: 2px solid #7b2ea2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.cube-face img {
+  width: 100px;
+  height: 100px;
+}
+
+.cube-face:nth-child(1) {
+  transform: rotateY(0deg) translateZ(100px);
+}
+
+.cube-face:nth-child(2) {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.cube-face:nth-child(3) {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube-face:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cube-face:nth-child(5) {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube-face:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.roll-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #8b58a5;
+  color: white;
+  border: #ffa91f 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.roll-button:hover {
+  background-color: #7b2ea2;
+  border: #ffa91f 2px solid;
+  transition: all 0.3s ease;
+}
+
+.roll-button.hidden {
+  opacity: 0; /* Le bouton devient invisible */
+  transform: scale(0.9); /* Ajoute un léger zoom-out */
+  pointer-events: none; /* Désactive les clics */
+}
+
+span {
+  font-weight: bold;
+  color: #8b58a5;
+  text-transform: uppercase;
+}
