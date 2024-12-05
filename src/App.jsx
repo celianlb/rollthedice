@@ -58,7 +58,7 @@ const App = () => {
   return (
     <div className="container">
       <header>
-        <img className="logo" src="../public/images/logo-ctrlz.png" alt="" />
+        <img className="logo" src="/images/logo-ctrlz.png" alt="" />
       </header>
       <div className="scene">
         <div
